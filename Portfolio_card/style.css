@@ -14,7 +14,7 @@ h1{
 }
 .card {
     display: flex;
-    width: 100px;
+    width: 100%;
     flex-direction: column;
     border: 2px;
     padding: 10px;
@@ -49,9 +49,9 @@ h1{
     grid-column: 1;
 }
 
-{
-    @media (width > 600px) and ( width < 1025px)
-}
+
+    @media (width > 600px) and ( width < 1025px) { 
+
 .card{
     flex-direction: row;
 }
@@ -63,3 +63,24 @@ h1{
 .card-description{
     border-left: 1.5px solid white;
 }
+    }
+
+    @media ( width > 1024px) { 
+
+  .card {
+    flex-direction: column;
+  }  
+  .card-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .card-image{
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .card-description{
+   border-left: none;
+   border-top: 1px solid white;
+  }
+  }
