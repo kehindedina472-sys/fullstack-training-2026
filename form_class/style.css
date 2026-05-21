@@ -1,0 +1,78 @@
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "helvetica neue" Arial, Helvetica, sans-serif;
+   }
+   body{
+    min-height: 100vh;
+    padding: 14px 10px 20px;
+    color: #111111;
+    background: #101010;
+   }
+   .head{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+   }
+   h1{
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+   }
+   .form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1rem;
+   }
+   .personal-information, .external-information-section, .account-section, .password-secction {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+   }
+   input, select, textarea, button{
+    padding: .5rem;
+   }
+   .form-group{
+    display: grid;
+    gap: .3rem;
+   }
+   .hide{
+    display: none;
+   }
+
+   @media ( width > 600px) {
+
+    body{
+        background-color: rgb( 226, 169, 169) ;
+    }
+    .form-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+    .button{
+        grid-auto-flow: column;
+        grid-column: span 2;
+        padding: 1rem;
+    }
+
+   }
+
+   @media ( width > 1025px) { 
+
+   .hide{
+    display:block
+   }
+    button{
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 1rem;
+    }
+   }

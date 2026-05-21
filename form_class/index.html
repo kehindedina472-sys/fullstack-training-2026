@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration form</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     
     <h1> GSTC Registration form</h1>
 
@@ -15,6 +15,9 @@
     
     <div class="personal-information">
     
+    <h1 class="section-title">personal Details</h1> 
+
+    <div class="form-group">
         <input type="text" placeholder="First name">
         <input type="text" placeholder="Last name">
 
@@ -26,22 +29,32 @@
          <input type="tel" placeholder="phone number">
          <input type="date" placeholder="Date of birth">
          <textarea cols="30" rows="3" placeholder="address"></textarea>
+         </div>
     </div>
 
     <div class="external-information-section">
+
+      <h1 class="section-title">External Details</h1>
+      <div class="form-group">
          <input type="text" placeholder="First name">
          <input type="text" placeholder="Last name">
          <input type="tel" placeholder=" external phone number">
          <input type="email" placeholder="external email address">
+      </div>
+
     </div>
 
     <div class="account-section">
+
+      <h1> Account information</h1>
+      <div class="form-group">
         <label> Account Type </label>
         <select> 
           <option value="1">Current</option>
           <option value="2">Savings</option>
           <option value="3">Domicial</option>
         </select>
+      </div>
 
         <label>ID Type</label>
         <select> 
@@ -54,11 +67,14 @@
     </div>
 
     <div class="password-section">
+      <h5 class="hide"> Enter password here</h5>
+      <div class="form-group">
       <input type="password" placeholder="password">
-      <input type="password" placeholder="Re enterpassword">
+      <input type="password" placeholder="Re-enter password">
+      </div>
 
     </div>
-
+    <button class="button"> submit</button>
 
 
 
