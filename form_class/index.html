@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration form</title>
     <link rel="stylesheet" href="style.css">
-    
+    </head>
+    <body>
     <h1> GSTC Registration form</h1>
-
-    <form class="form-container">
+  
+    <form class="form-container" id="registrationForm">
 
     <!-- first name, last name, dob, email, gender, phone number, address, ext contact info, account type, id card type, id number, password
     1. personal details, 2. account information -->
@@ -18,17 +19,18 @@
     <h1 class="section-title">personal Details</h1> 
 
     <div class="form-group">
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
+        <input type="text" id="firstName" placeholder="First name">
+        <input type="text" id="LastName" placeholder="Last name">
 
-        <select>
+        <select id="gender">
+          <option>Select Gender</option>
          <option value="MALE">male</option>
          <option value="FEMALE"> female</option>
         </select>
 
-         <input type="tel" placeholder="phone number">
-         <input type="date" placeholder="Date of birth">
-         <textarea cols="30" rows="3" placeholder="address"></textarea>
+         <input type="tel" id="phoneNumber" placeholder="phone number">
+         <input type="date" id="dob" placeholder="Date of birth">
+         <textarea id="address" cols="60" rows="3" placeholder="address"></textarea>
          </div>
     </div>
 
@@ -36,10 +38,10 @@
 
       <h1 class="section-title">External Details</h1>
       <div class="form-group">
-         <input type="text" placeholder="First name">
-         <input type="text" placeholder="Last name">
-         <input type="tel" placeholder=" external phone number">
-         <input type="email" placeholder="external email address">
+         <input type="text" id="extFirstName" placeholder="First name">
+         <input type="text" id="extLastName" placeholder="Last name">
+         <input type="tel" id="extPhoneNumber" placeholder=" external phone number">
+         <input type="email" id="extEmail" placeholder="external email address">
       </div>
 
     </div>
@@ -49,39 +51,39 @@
       <h1> Account information</h1>
       <div class="form-group">
         <label> Account Type </label>
-        <select> 
-          <option value="1">Current</option>
-          <option value="2">Savings</option>
-          <option value="3">Domicial</option>
+        <select id="accountType"> 
+          <option value="current">Current</option>
+          <option value="savings">Savings</option>
+          <option value="Domicial">Domicial</option>
         </select>
       </div>
 
+      <div class="form-group">
         <label>ID Type</label>
-        <select> 
-          <option value="1">Nepa bill</option>
-          <option value="2">Voters Card</option>
-          <option value="3">NIN</option>
-          <option value="4">International passport</option>
-          <option value="5">Others</option>
+        <select id="idType"> 
+          <option value="nepa bil">Nepa bill</option>
+          <option value="VOTERS CARD">Voters Card</option>
+          <option value="NIN">NIN</option>
+          <option value="INTERNATIONAL">International passport</option>
+          <option value="OTHERS">Others</option>
         </select>
     </div>
+    </div>
 
-    <div class="password-section">
+    <div class="password-section" >
       <h5 class="hide"> Enter password here</h5>
       <div class="form-group">
-      <input type="password" placeholder="password">
-      <input type="password" placeholder="Re-enter password">
+      <input type="password" id="password" placeholder="password">
+      <input type="password" id="confirmPassword" placeholder="Re-enter password">
       </div>
 
     </div>
     <button class="button"> submit</button>
 
-
-
     </form>
-    
-</head>
-<body>
-    
+  
+    <div id="output" class="output-section"></div>
+    <script src="script.js"></script>
+
 </body>
 </html>
